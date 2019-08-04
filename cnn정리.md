@@ -1,5 +1,29 @@
 # CNN
 
+CNN은 Convolution layer와 Fully Connected layer로 구성되어 있음.
+
+#### Convolution filter
+
+-> 입력을 필터와 합성곱하여 특징을 추출하고 Feature Map을 형성
+
+#### Relu
+
+-> 활성함수로 기존 신경망에서 사용하던 시그모이드 대신 사용
+
+#### MaxPool
+
+-> 피처맵의 크기를 줄임
+
+
+
+Fully Connected layer는 Convolution layer에서 특징을 뽑아낸 피처맵을 입력으로 하여 기존 다층 신경망과 동일한 방법으로 학습을 함. (저수준의 특징에서 고수준으로 만들고 복잡한 데이터도 쉽게 학습이 됨)
+
+#### 특징
+
+필터를 자동으로 학습하여 생성한다는 점. 다만 필터의 개수와 합성곱 레이어를 어떻게 배치할 것인가는 데이터에 맞게 직접 조정해야됨
+
+%참조 : https://bcho.tistory.com/1149
+
 ```
 import tensorflow as tf
 import numpy as np
@@ -148,3 +172,34 @@ print(testResult)
 
 ```
 
+### 용어 정리
+
+```
+X = tf.placeholder(tf.float32, [None, numOfFeatures, numOfFeatures, 1])
+```
+
+[None, 62, 62, 1] : None 개의 62 x 62 x 1 크기의 데이터 셋.
+
+그냥 용기라고 생각하면 됨.
+
+
+
+```
+Y = tf.placeholder(tf.float32,[None, numOfLabels]) 
+```
+
+[None, 20] : 20개의 Y 값. 나중에 
+
+
+
+> epoch
+
+전체 데이터 셋에 대해 한번 학습을 완료한 상태.  여기서는 epoch_size : 100 , 적절한 크기 필요.
+
+1epoch : 모든 데이터 셋을 1번 학습
+
+> batch
+
+메모리의 한계와 속도 저하 때문에 대부분의 경우 한 번의 epoch에서 모든 데이터를 한꺼번에 집어넣을 수 는 없음. 그래서 데이터를 나눠주게 되는데 몇 번 나누어서 주는가를 iteration, 각 iteration마다 주는 데이터 사이즈를 batch size
+
+![img](https://mblogthumb-phinf.pstatic.net/MjAxOTAxMjNfMjU4/MDAxNTQ4MjM1Nzg3NTA2.UtvnGsckZhLHOPPOBWH841IWsZFzNcgwZvYKi2nxImEg.CdtqIxOjWeBo4eNBD2pXu5uwYGa3ZVUr8WZvtldArtYg.PNG.qbxlvnf11/20190123_182720.png?type=w800)
