@@ -1,0 +1,74 @@
+﻿  Application.cpp
+  Camera.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  Cube.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  CubeMap.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+CubeMap.cpp(106): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+  Final.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+Final.cpp(36): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+Final.cpp(44): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+  Geometry.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  Lecture10.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  Lecture5.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  LightMain.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+LightMain.cpp(73): warning C4018: '<': signed/unsigned mismatch
+LightMain.cpp(58): warning C4101: 'program': unreferenced local variable
+  main.cpp
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  C:\Users\MYCOM\Desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\GLFW/glfw3.h(98): note: see previous definition of 'APIENTRY'
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+main.cpp(31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  objModel.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  Quad.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  RenderMain.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+RenderMain.cpp(72): warning C4018: '<': signed/unsigned mismatch
+RenderMain.cpp(82): warning C4018: '<': signed/unsigned mismatch
+RenderMain.cpp(94): warning C4018: '<': signed/unsigned mismatch
+  Shader.cpp
+  texture.cpp
+  TextureMgr.cpp
+  vertexBufferObject.cpp
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_common.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\core\func_common.inl : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+c:\users\mycom\desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\include\glm\./core/func_integer.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+  Generating code
+  746 of 751 functions (99.3%) were compiled, the rest were copied from previous compilation.
+    4 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  BDEngine_V13.vcxproj -> C:\Users\MYCOM\Desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\Release\BDEngine_V13.exe
+  BDEngine_V13.vcxproj -> C:\Users\MYCOM\Desktop\수업자료\3-2수업자료\그래픽스\20131163 공병두 최종과제\Release\BDEngine_V13.pdb (Full PDB)

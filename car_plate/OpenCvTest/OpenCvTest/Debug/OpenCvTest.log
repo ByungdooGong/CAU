@@ -1,0 +1,16 @@
+﻿Build started 2018-06-18 오전 2:23:54.
+     1>Project "C:\Users\ByungMoon\Desktop\18년 1학기\컴퓨터비젼응용\OpenCvTest\OpenCvTest\OpenCvTest\OpenCvTest.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\opencv2\build\include /IC:\opencv2\build\include\opencv2 /IC:\opencv2\build\include\opencv /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Kmeans.cpp
+         Kmeans.cpp
+     1>c:\opencv2\build\include\opencv2\core\mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+     1>c:\opencv2\build\include\opencv2\core\persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+     1>c:\opencv2\build\include\opencv2\core\utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ByungMoon\Desktop\18년 1학기\컴퓨터비젼응용\OpenCvTest\OpenCvTest\Debug\OpenCvTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\opencv2\build\x86\vc12\lib opencv_ts300.lib opencv_ts300d.lib opencv_world300.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\ByungMoon\Desktop\18년 1학기\컴퓨터비젼응용\OpenCvTest\OpenCvTest\Debug\OpenCvTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ByungMoon\Desktop\18년 1학기\컴퓨터비젼응용\OpenCvTest\OpenCvTest\Debug\OpenCvTest.lib" /MACHINE:X86 Debug\Kmeans.obj
+         OpenCvTest.vcxproj -> C:\Users\ByungMoon\Desktop\18년 1학기\컴퓨터비젼응용\OpenCvTest\OpenCvTest\Debug\OpenCvTest.exe
+     1>Done Building Project "C:\Users\ByungMoon\Desktop\18년 1학기\컴퓨터비젼응용\OpenCvTest\OpenCvTest\OpenCvTest\OpenCvTest.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.38

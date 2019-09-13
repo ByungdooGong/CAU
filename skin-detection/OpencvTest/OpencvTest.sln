@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpencvTest", "OpencvTest\OpencvTest.vcxproj", "{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Template_shadowdectection", "Template_shadowdectection\Template_shadowdectection.vcxproj", "{E973D462-7421-46D5-B6A5-0752AA622D14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Debug|Win32.Build.0 = Debug|Win32
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Debug|x64.ActiveCfg = Debug|x64
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Debug|x64.Build.0 = Debug|x64
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Release|Mixed Platforms.Build.0 = Release|x64
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Release|Win32.ActiveCfg = Release|Win32
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Release|Win32.Build.0 = Release|Win32
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Release|x64.ActiveCfg = Release|x64
+		{0FE2CF2D-53AE-409F-AC6E-D11A3AC8105A}.Release|x64.Build.0 = Release|x64
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Debug|Win32.Build.0 = Debug|Win32
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Debug|x64.ActiveCfg = Debug|Win32
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Release|Win32.ActiveCfg = Release|Win32
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Release|Win32.Build.0 = Release|Win32
+		{E973D462-7421-46D5-B6A5-0752AA622D14}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
