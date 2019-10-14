@@ -77,3 +77,120 @@ Mat logImage;
 filter2D(input_gray_image, logImage, CV_32F, logKernel);
 imshow("logImage", logImage);
 ```
+Log(Laplacian of Gaussian) 필터 적용
+![log](./img/log.jpg)
+
+2차 미분의 장점은 엣지의 중심에 위치한 임의의 엣지를 찾을 수 있어 엣지를 찾는데 더욱 특화되어 있다. 2차 미분 결과 영상의 엣지 부분에서 부호가 바뀌게 되는데 이를 영교차라고 한다. 
+
+라플라시안 연산의 경우 잡음에 민감하기 때문에 Gaussian Smoothing을 수행하여 잡음을 제거하고 라플라시안 연산을 이용한다. 이를 Log(Laplacian of Gaussian)이라고 한다. 
+
+```
+Mat zeroCross = Mat::zeros(input_gray_image.size(), CV_8U);
+ZeroCrossing(logImage, zeroCross, 100);
+imshow("log->zeroCrossing", zeroCross);
+```
+zeroCrossing을 통해 엣지 부분을 정확히 찾아낸다. 
+
+```
+Mat img_labels, stats, centroids;
+Mat drawing;
+input_gray_image.copyTo(drawing);
+
+int numOfLabels = connectedComponentsWithStats(zeroCross, img_labels, stats, centroids, 8, CV_32S);
+
+vector<int> boundRect;
+vector<int> index;
+
+int numOfratio = 0;
+for (int j = 0; j < numOfLabels; j++){
+
+    int area = stats.at<int>(j, CC_STAT_AREA);
+    int left = stats.at<int>(j, CC_STAT_LEFT);
+    int top = stats.at<int>(j, CC_STAT_TOP);
+    int width = stats.at<int>(j, CC_STAT_WIDTH);
+    int height = stats.at<int>(j, CC_STAT_HEIGHT);
+
+    ratio = width / height;
+    if (ratio <= 0.9)
+    {
+        rectangle(drawing, Point(left, top), Point(left + width, top + height), Scalar(255, 0, 0), 1);
+        numOfratio++;
+        boundRect.push_back(left);  //left 정보
+        index.push_back(j); //label 정보
+    }
+}
+imshow("result", drawing);
+```
+ConnectedComponentWithStats 함수를 이용해 blob들을 찾아내고 가로 세로의 비율이 0.9 이하인 것(숫자 특성에 가까움)을 추려낸다.
+
+```
+vector<int> order(index.size());
+
+//Sort
+int far_right = -1;
+int k1 = 0;
+int temp;
+for (int i = 0; i < numOfratio; i++)
+{
+    for (int j = 0; j < numOfratio; j++)
+    {
+        if (far_right < boundRect[j])
+        {
+            far_right = boundRect[j];
+            order[k1] = index[j];  //오른쪽에 있는 순서대로 label정보 넣기
+            temp = j;
+        }
+
+    }
+    boundRect[temp] = -1;
+    k1++;
+    far_right = -1;
+}
+Mat sorting = Mat::zeros(drawing.size(), CV_8UC3);
+	
+int num_plate = 0;
+for (int j = 0; j < numOfratio; j++)
+{
+    int area = stats.at<int>(order[j], CC_STAT_AREA);
+    int left = stats.at<int>(order[j], CC_STAT_LEFT);
+    int top = stats.at<int>(order[j], CC_STAT_TOP);
+    int width = stats.at<int>(order[j], CC_STAT_WIDTH);
+    int height = stats.at<int>(order[j], CC_STAT_HEIGHT);
+
+    rectangle(sorting, Point(left, top), Point(left + width, top + height), Scalar(255, 0, 0), 1);
+    putText(sorting, to_string(j), Point(left, top), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 255, 255), 2);
+}
+
+imshow("sorting", sorting);
+```
+이 후 오른쪽 부터 순서대로 label을 붙인다. 
+
+```
+int h1 = 0;
+vector<int> cand;
+for (int i = 0; i < numOfratio; i++)
+{
+    for (int j = i + 1; j < numOfratio; j++)
+    {
+        if (abs(stats.at<int>(order[i],CC_STAT_TOP) - stats.at<int>(order[j], CC_STAT_TOP)) < 0.2 * stats.at<int>(order[i], CC_STAT_WIDTH))
+        {
+            num_plate++;
+            cand.push_back(j);
+        }
+
+    }
+    if (num_plate == 3)
+    {
+        h1 = i;
+        break;
+    }
+    cand.clear();
+    num_plate = 0;
+
+}
+```
+차량 번호판의 경우 숫자 네개가 연속하고 각각의 숫자간에 관계를 가진다. 
+
+![rule](./img/rule.jpg)
+
+사각형 사이의 normal gap < 0.2 X 사각형 width 인 번호영역을 우측에서 좌측으로 탐색하며 찾게된다. 
