@@ -26,19 +26,19 @@ ConnectedComponetsWithStats 함수를 통한 블로핑
 
 ROI 영역 출력
 
-![7](./img/Roi.jpg)
+![7](./img/Roi1.jpg)
 
 주변 값 0으로 패딩
 
-![8](./img/final.jpg)
+![8](./img/final1.jpg)
 
 Tesseract-OCR을 통한 텍스트 분석
 
-![9](./img/cmd.jpg)
+![9](./img/cmd1.jpg)
 
 결과값 출력
 
-![10](./img/text.jpg)
+![10](./img/text1.jpg)
 
 
 [참조논문](https://home.kiu.ac.kr/~ho/face/2011-04-18-plate.pdf)
