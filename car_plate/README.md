@@ -194,3 +194,36 @@ for (int i = 0; i < numOfratio; i++)
 ![rule](./img/rule.jpg)
 
 사각형 사이의 normal gap < 0.2 X 사각형 width 인 번호영역을 우측에서 좌측으로 탐색하며 찾게된다. 
+
+```
+Mat temp_image;
+input_image.copyTo(temp_image);
+//Mat result = Mat::zeros(drawing.size(), CV_8UC3);
+rectangle(temp_image, Point(stats.at<int>(order[h1], CC_STAT_LEFT), stats.at<int>(order[h1], CC_STAT_TOP))
+    , Point(stats.at<int>(order[h1], CC_STAT_LEFT) + stats.at<int>(order[h1], CC_STAT_WIDTH),
+    stats.at<int>(order[h1], CC_STAT_TOP) + stats.at<int>(order[h1], CC_STAT_HEIGHT)), Scalar(0, 0, 255), 2);
+//imshow("first_number", temp_image);
+```
+연속하는 네개의 숫자를 찾았다. 
+
+```
+int far_left = cand[cand.size() - 1];
+
+int width = stats.at<int>(order[h1], CC_STAT_LEFT) + stats.at<int>(order[h1], CC_STAT_WIDTH) - stats.at<int>(order[far_left], CC_STAT_LEFT);
+int end_y= stats.at<int>(order[h1], CC_STAT_TOP) + stats.at<int>(order[h1], CC_STAT_HEIGHT);
+int end_x = stats.at<int>(order[h1], CC_STAT_LEFT) + stats.at<int>(order[h1], CC_STAT_WIDTH);
+cout << "width" << width << endl;
+cout << "end_x" << end_x - 1.5*width << "end_y" << end_y - stats.at<int>(order[h1], CC_STAT_HEIGHT)*1.8 << endl;
+Mat roi_image = input_image(Rect(end_x - width, end_y - stats.at<int>(order[h1], CC_STAT_HEIGHT), width, stats.at<int>(order[h1], CC_STAT_HEIGHT)));
+
+imshow("plate", roi_image);
+Mat result_image, final_image;
+cvtColor(roi_image, result_image, CV_BGR2GRAY);
+imshow("tmp", result_image);
+threshold(result_image, final_image, 100, 255, THRESH_BINARY);
+copyMakeBorder(final_image, final_image, 100, 100, 100, 100, BORDER_CONSTANT, Scalar(0, 0, 0));
+imshow("final", final_image);
+waitKey();
+return 0;
+```
+이 후 관심영역(ROI)를 분리해내고 이를 이진화하여 패딩을 한다. 이는 Tesseract-OCR의 원활한 인식을 위해 수행하였다. 
