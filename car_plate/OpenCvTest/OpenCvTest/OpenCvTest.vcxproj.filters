@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Kmeans.cpp">
+    <ClCompile Include="ExtractCarNum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

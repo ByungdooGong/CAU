@@ -22,6 +22,7 @@ int main()
 	int select, plate_width, count, friend_count = 0, refinery_count = 0;
 	
 	imshow("입력 이미지", input_gray_image);
+	
 	/*
 	Mat gaussian;
 	//Mat gaussian2 = Mat::zeros(input_gray_image.size(), CV_8U);
@@ -54,7 +55,7 @@ int main()
 	//cout << "logKernel=" << logKernel << endl;
 	Mat logImage;
 	filter2D(input_gray_image, logImage, CV_32F, logKernel);
-	imshow("logImage", logImage);
+	//imshow("logImage", logImage);
 	
 	
 	Mat zeroCross = Mat::zeros(input_gray_image.size(), CV_8U);
@@ -88,7 +89,7 @@ int main()
 			index.push_back(j); //label 정보
 		}
 	}
-	imshow("result", drawing);
+	//imshow("result", drawing);
 	vector<int> order(index.size());
 
 	//Sort
@@ -125,13 +126,8 @@ int main()
 
 		rectangle(sorting, Point(left, top), Point(left + width, top + height), Scalar(255, 0, 0), 1);
 		putText(sorting, to_string(j), Point(left, top), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 255, 255), 2);
-		
-		
-	
 	}
-
-
-	imshow("sorting", sorting);
+	//imshow("sorting", sorting);
 	int h1 = 0;
 	vector<int> cand;
 	//candidate[0] = boundRect[index[0]];
@@ -167,7 +163,7 @@ int main()
 	rectangle(temp_image, Point(stats.at<int>(order[h1], CC_STAT_LEFT), stats.at<int>(order[h1], CC_STAT_TOP))
 		, Point(stats.at<int>(order[h1], CC_STAT_LEFT) + stats.at<int>(order[h1], CC_STAT_WIDTH),
 		stats.at<int>(order[h1], CC_STAT_TOP) + stats.at<int>(order[h1], CC_STAT_HEIGHT)), Scalar(0, 0, 255), 2);
-	imshow("first_number", temp_image);
+	//imshow("first_number", temp_image);
 	
 	
 	int far_left = cand[cand.size() - 1];
@@ -177,9 +173,15 @@ int main()
 	int end_x = stats.at<int>(order[h1], CC_STAT_LEFT) + stats.at<int>(order[h1], CC_STAT_WIDTH);
 	cout << "width" << width << endl;
 	cout << "end_x" << end_x - 1.5*width << "end_y" << end_y - stats.at<int>(order[h1], CC_STAT_HEIGHT)*1.8 << endl;
-	Mat roi_image = input_image(Rect(end_x - 1.5*width, end_y - stats.at<int>(order[h1], CC_STAT_HEIGHT)*1.8, 1.5*width, 1.8*stats.at<int>(order[h1], CC_STAT_HEIGHT)));
+	Mat roi_image = input_image(Rect(end_x - width, end_y - stats.at<int>(order[h1], CC_STAT_HEIGHT), width, stats.at<int>(order[h1], CC_STAT_HEIGHT)));
 	
 	imshow("plate", roi_image);
+	Mat result_image, final_image;
+	cvtColor(roi_image, result_image, CV_BGR2GRAY);
+	imshow("tmp", result_image);
+	threshold(result_image, final_image, 100, 255, THRESH_BINARY);
+	copyMakeBorder(final_image, final_image, 100, 100, 100, 100, BORDER_CONSTANT, Scalar(0, 0, 0));
+	imshow("final", final_image);
 	waitKey();
 	return 0;
 }
